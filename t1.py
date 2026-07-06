@@ -9,7 +9,6 @@ import matplotlib.font_manager as fm
 import os
 font_path = os.path.join(os.path.dirname(__file__), "simhei.ttf")
 
-
 st.set_page_config(
     page_title="神积脑盾 - 实时分析引擎",
     page_icon="🧠",
