@@ -25,7 +25,7 @@ if os.path.exists(font_path):
     fm.fontManager.addfont(font_path)  # 清除 matplotlib 字体缓存，重新添加 
     font_prop = fm.FontProperties(fname=font_path)  # 找到字体名称
     font_name = font_prop.get_name() 
-    st.caption(font_prop)
+    st.caption(font_name)
     # plt.rcParams['font.family'] = font_name    # 强制设置默认字体
     # plt.rcParams['font.sans-serif'] = [font_name]
 else:
