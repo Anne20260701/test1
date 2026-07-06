@@ -8,7 +8,9 @@ import pandas as pd
 import matplotlib.font_manager as fm
 import os
 font_path = os.path.join(os.path.dirname(__file__), "simhei.ttf")
+    
 
+    
 st.set_page_config(
     page_title="神积脑盾 - 实时分析引擎",
     page_icon="🧠",
@@ -16,7 +18,8 @@ st.set_page_config(
 )
 
 st.title("🧠 神积脑盾 - 实时EEG/ERP分析引擎")
-st.caption("基于听觉Oddball范式的P300检测与保险反欺诈评分")
+if os.path.exists(font_path):
+    st.caption("基于听觉Oddball范式的P300检测与保险反欺诈评分")
 
 # ============================================
 # 核心信号处理函数（真正在干活的部分）
