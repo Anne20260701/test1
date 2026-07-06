@@ -16,9 +16,7 @@ if os.path.exists(font_path):
     font_prop = fm.FontProperties(fname=font_path)  # 找到字体名称
     font_name = font_prop.get_name() 
     plt.rcParams['font.family'] = font_name    # 强制设置默认字体
-    plt.rcParams['font.sans-serif'] = [font_name]
-    st.caption(font_name)
-    st.caption(plt.rcParams['font.family'])
+    plt.rcParams['font.sans-serif'] = [font_name] 
 else:  # 如果找不到 simhei.ttf，尝试系统字体
     plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
 
