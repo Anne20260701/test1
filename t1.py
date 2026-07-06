@@ -5,6 +5,9 @@ from scipy import signal
 from scipy.signal import butter, filtfilt
 import pandas as pd
 
+import matplotlib.font_manager as fm
+import os
+
 st.set_page_config(
     page_title="神积脑盾 - 实时分析引擎",
     page_icon="🧠",
