@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 st.title("🧠 神积脑盾 - 实时EEG/ERP分析引擎")
-if os.path.exists(font_path):
+if not os.path.exists(font_path):
     st.caption("基于听觉Oddball范式的P300检测与保险反欺诈评分")
 
 # ============================================
