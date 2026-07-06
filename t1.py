@@ -9,7 +9,18 @@ import matplotlib.font_manager as fm
 import os
 font_path = os.path.join(os.path.dirname(__file__), "simhei.ttf")
     
+if os.path.exists(font_path): 
+    fm.fontManager.addfont(font_path)  # 清除 matplotlib 字体缓存，重新添加 
+    # font_prop = fm.FontProperties(fname=font_path)  # 找到字体名称
+    # font_name = font_prop.get_name() 
+    # plt.rcParams['font.family'] = font_name    # 强制设置默认字体
+    # plt.rcParams['font.sans-serif'] = [font_name]
+else:
+    # 如果找不到 simhei.ttf，尝试系统字体
+    plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
 
+# 解决负号显示问题
+plt.rcParams['axes.unicode_minus'] = False
     
 st.set_page_config(
     page_title="神积脑盾 - 实时分析引擎",
@@ -18,8 +29,7 @@ st.set_page_config(
 )
 
 st.title("🧠 神积脑盾 - 实时EEG/ERP分析引擎")
-if not os.path.exists(font_path):
-    st.caption("基于听觉Oddball范式的P300检测与保险反欺诈评分")
+st.caption("基于听觉Oddball范式的P300检测与保险反欺诈评分")
 
 # ============================================
 # 核心信号处理函数（真正在干活的部分）
