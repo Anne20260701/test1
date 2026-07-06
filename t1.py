@@ -21,12 +21,12 @@ else:  # 如果找不到 simhei.ttf，尝试系统字体
     plt.rcParams['font.sans-serif'] = ['SimHei', 'Microsoft YaHei', 'Arial Unicode MS']
 
 st.set_page_config(
-    page_title="神积脑盾 - 实时分析引擎",
+    page_title="实时分析引擎",
     page_icon="🧠",
     layout="wide"
 )
 
-st.title("🧠 神积脑盾 - 实时EEG/ERP分析引擎")
+st.title("🧠 实时EEG/ERP分析引擎")
 st.caption("基于听觉Oddball范式的P300检测与保险反欺诈评分")
 
 # ============================================
